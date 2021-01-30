@@ -23,7 +23,7 @@ public final class Or<T> implements Guard<T> {
     public String getDescription() {
         final StringBuilder sb = new StringBuilder();
         sb.append("[");
-        for (Guard action : this.guards) {
+        for (Guard<T> action : this.guards) {
             sb.append(action.getDescription());
             sb.append(" or ");
         }

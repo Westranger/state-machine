@@ -4,10 +4,8 @@ import org.junit.jupiter.api.Test;
 import state.machine.action.Action;
 import state.machine.action.ActionSequence;
 import test.state.machine.TestData;
-import test.state.machine.action.TestActionA;
-import test.state.machine.action.TestActionB;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ActionSequenceTest {
 
@@ -22,5 +20,7 @@ class ActionSequenceTest {
         aSeq.execute(null, null, td);
 
         assertEquals(60.0,td.getValue());
+
+        assertEquals("Action sequence: [x / 10.0, x * 100.0]",aSeq.getDescription());
     }
 }

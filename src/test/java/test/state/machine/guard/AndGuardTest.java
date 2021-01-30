@@ -5,6 +5,7 @@ import state.machine.guard.And;
 import state.machine.guard.Guard;
 import test.state.machine.TestData;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -21,6 +22,8 @@ class AndGuardTest {
 
         td.setValue(20.0);
         assertFalse(gAnd.check(null, td));
+
+        assertEquals("[x > 2.0 and x < 10.0]",gAnd.getDescription());
     }
 
     @Test

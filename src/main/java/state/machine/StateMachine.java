@@ -4,9 +4,7 @@ import state.machine.action.Action;
 import state.machine.guard.Guard;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 public final class StateMachine<T> {
 
@@ -172,7 +170,6 @@ public final class StateMachine<T> {
                 sb.append('"');
                 sb.append(" [ label = ");
                 sb.append('"');
-                // put guards,events and actions here
                 sb.append("Event: ");
                 sb.append(stateEventPair.getValue().getSimpleName());
                 sb.append("\\n");
