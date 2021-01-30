@@ -5,7 +5,6 @@ import state.machine.guard.Or;
 import state.machine.guard.Guard;
 import test.state.machine.TestData;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
 class OrGuardTest {
